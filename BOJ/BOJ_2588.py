@@ -1,8 +1,6 @@
 a = int(input())
-b = int(input())
+b = input()
 
-lst = []
-for i in reversed(str(b)):
-    lst.append(i)
+for i in reversed(b):
     print(a * int(i))
-print(a * b)
+print(a * int(b))
