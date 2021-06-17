@@ -1,4 +1,4 @@
-# 코드 수정후 업로드(21-0617)
+# 코드 수정후 업로드(21-06-17)
 def solution(lottos, win_nums):
     score_table = [6, 6, 5, 4, 3, 2, 1]
     max_cnt, min_cnt = 0, 0
