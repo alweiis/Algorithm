@@ -12,4 +12,4 @@ def solution(board, moves):
             if answer[-2] == answer[-1]:
                 del answer[-2:]
                 cnt += 2
-    return answer
+    return cnt
