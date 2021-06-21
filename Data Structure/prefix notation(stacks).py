@@ -29,22 +29,26 @@ prec = {
 def solution(S):
     opStack = ArrayStack()
     answer = ''
-    for ele in S:
-        if ele.isalpha():
-            answer.join(ele)
+    for c in S:
+        if c.isalpha():
+            answer += c
         else:
-            if opStack.size() == 0:
-                opStack.push(ele)
-            if ele == '(':
-                opStack.push(ele)
-            elif ele == ')':
+            if c == '(':
+                opStack.push(c)
+            elif c == ')':
                 while not opStack.peek() == '(':
-                    answer.join(opStack.pop())
+                    answer += opStack.pop()
+                opStack.pop()
+            elif not opStack.isEmpty():
+                s = opStack.peek()
+                while prec[c] <= prec[s]:
+                    answer += opStack.pop()
+                    if opStack.isEmpty():
+                        break
+                opStack.push(c)
             else:
-                if prec.get(ele) >= prec.get(opStack.peek()):
-                    answer.join(opStack.pop())
-                else:
-                    opStack.push(ele)
+                opStack.push(c)
+
     while not opStack.isEmpty():
-        answer.join(opStack.pop())
+        answer += opStack.pop()
     return answer
