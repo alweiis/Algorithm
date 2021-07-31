@@ -1,9 +1,7 @@
 def change_string(x, a, b):
     cnt = 0
     for i in range(len(x)):
-        if x[i] == a:
-            x.replace(x[i], b)
-        elif x[i] == b and x[i - 1] == a:
+        if x[i] == b and x[i - 1] == a:
             cnt += 1
     print(cnt)
 
