@@ -6,9 +6,11 @@
 * [Data Structure][Data Structure_Link] : 자료 구조 구현 코드(파이썬)
 * [Programmers_Step1][Programmers_Step1_Repo_Link] : 프로그래머스 '1단계' 문제 풀이 코드
 * [Programmers_Step2][Programmers_Step2_Repo_Link] : 프로그래머스 '2단계' 문제 풀이 코드
+* [Programmers_Weekly_Challenge][Programmers_Weekly_Link] : 프로그래머스 'Weekly Challenge' 문제 풀이 코드
 
 
 [BOJ_steps_Repo_Link]: https://github.com/hueco3/Algorithm/tree/main/BOJ/steps
 [Data Structure_Link]: https://github.com/hueco3/Algorithm/tree/main/Data%20Structure
 [Programmers_Step1_Repo_Link]: https://github.com/hueco3/Algorithm/tree/main/Programmers/Step1
 [Programmers_Step2_Repo_Link]: https://github.com/hueco3/Algorithm/tree/main/Programmers/Step2
+[Programmers_Weekly_Link]: https://github.com/hueco3/Algorithm/tree/main/Programmers/Weekly%20Challenge
