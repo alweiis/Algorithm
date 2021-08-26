@@ -3,7 +3,6 @@ def solution(table, languages, preference):
 
     for row in table:
         new_table.append(list(reversed(row.split())))
-
     for row in new_table:
         total_score = 0
         for idx in range(len(languages)):
@@ -11,9 +10,7 @@ def solution(table, languages, preference):
                 if languages[idx] == name:
                     total_score += score * preference[idx]
         score_list.append(total_score)
-
-    for idx, value in enumerate(score_list):
-        if value == max(score_list):
+    for idx, score in enumerate(score_list):
+        if score == max(score_list):
             result_lst.append(new_table[idx][-1])
-
     return sorted(result_lst)[0]
