@@ -7,6 +7,5 @@ for _ in range(n):
         books[book] += 1
     else:
         books[book] = 1
-result = sorted([(book, cnt) for book, cnt in books.items()], key=lambda x: (-x[1], x[0]))
-print(result)
+result = sorted(books.items(), key=lambda x: (-x[1], x[0]))
 print(result[0][0])
