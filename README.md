@@ -11,10 +11,11 @@
 * [Programmers_Weekly_Challenge][Programmers_Weekly_Link] : 프로그래머스 'Weekly Challenge' 문제 풀이 코드
 
 
-[BOJ_Repo_Link]: https://github.com/hueco3/Algorithm/tree/main/BOJ
-[LeetCode_Repo_Link] : https://github.com/alweiis/Algorithm/tree/main/LeetCode
-[Data Structure_Link]: https://github.com/hueco3/Algorithm/tree/main/Data%20Structure
-[Programmers_Step1_Repo_Link]: https://github.com/hueco3/Algorithm/tree/main/Programmers/Step1
-[Programmers_Step2_Repo_Link]: https://github.com/hueco3/Algorithm/tree/main/Programmers/Step2
-[Programmers_Step3_Repo_Link]: https://github.com/hueco3/Algorithm/tree/main/Programmers/Step3
-[Programmers_Weekly_Link]: https://github.com/hueco3/Algorithm/tree/main/Programmers/Weekly%20Challenge
+
+[BOJ_Repo_Link]: https://github.com/alweiis/Algorithm/tree/main/BOJ
+[LeetCode_Repo_Link]: https://github.com/alweiis/Algorithm/tree/main/LeetCode
+[Data Structure_Link]: https://github.com/alweiis/Algorithm/tree/main/Data%20Structure
+[Programmers_Step1_Repo_Link]: https://github.com/alweiis/Algorithm/tree/main/Programmers/Step1
+[Programmers_Step2_Repo_Link]: https://github.com/alweiis/Algorithm/tree/main/Programmers/Step2
+[Programmers_Step3_Repo_Link]: https://github.com/alweiis/Algorithm/tree/main/Programmers/Step3
+[Programmers_Weekly_Link]: https://github.com/alweiis/Algorithm/tree/main/Programmers/Weekly%20Challenge
