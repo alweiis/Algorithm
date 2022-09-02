@@ -1,6 +1,10 @@
 def solution(brown, yellow):
-    for a in range(1, int(yellow ** 0.5) + 1):
-        if yellow % a == 0:
-            b = yellow // a
-            if 2*a + 2*b + 4 == brown:
-                return [b+2, a+2]
+    total = brown + yellow
+    for i in range(1, total + 1):
+        column = i
+        row = total // column
+        yellow_column = column - 2
+        yellow_row = row - 2
+        area = yellow_row * yellow_column
+        if area == yellow:
+            return [row, column]
