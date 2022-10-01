@@ -3,7 +3,7 @@ n = int(input())
 first_word = input()
 first_counter = Counter(first_word)
 answer = 0
-for j in range(n-1):
+for _ in range(n-1):
     check_word = input()
     check_counter = Counter(check_word)
     if first_counter == check_counter:
