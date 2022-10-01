@@ -16,6 +16,6 @@ for _ in range(n-1):
         wrong_counter = first_counter - check_counter
     elif len(first_word) < len(check_word):
         wrong_counter = check_counter - first_counter
-    if len(wrong_counter) == 0 or (len(wrong_counter) == 1 and wrong_counter.most_common(1)[0][1] < 2):
+    if len(wrong_counter) == 1 and wrong_counter.most_common(1)[0][1] < 2:
         answer += 1
 print(answer)
