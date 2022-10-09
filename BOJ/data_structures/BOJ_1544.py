@@ -1,7 +1,7 @@
 from collections import deque
 n = int(input())
 checker = set()
-checker.add(''.join(input()))
+checker.add(input())
 for _ in range(n-1):
     word = deque(input())
     for _ in range(len(word)):
