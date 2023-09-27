@@ -6,7 +6,8 @@ for _ in range(n):
     for c in word:
         stack.append(c)
         if len(stack) >= 2 and stack[-1] == stack[-2]:
-            stack = stack[0:-2]
+            stack.pop()
+            stack.pop()
     if not stack:
         good_word += 1
 print(good_word)
