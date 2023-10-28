@@ -12,4 +12,4 @@ else:
     for i in range(n - m + 1):
         if user_op[i:i + m] == secret_op:
             answer = 'secret'
-    print(answer)뉴
+    print(answer)
