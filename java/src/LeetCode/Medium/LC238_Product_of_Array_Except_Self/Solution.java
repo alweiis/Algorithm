@@ -6,10 +6,12 @@ class Solution {
         int[] answer = new int[n];
         for (int i = 0; i < n; i++) {
             answer[i] = 1;
-            if (i > 0) {
-                answer[i] *= nums[i-1] * answer[i-1];
-            }
         }
+
+        for (int i = 1; i < n; i++) {
+            answer[i] *= nums[i-1] * answer[i-1];
+        }
+
         for (int i = n-2; i >= 0; i--) {
             answer[i] *= nums[i+1];
             nums[i] *= nums[i+1];
