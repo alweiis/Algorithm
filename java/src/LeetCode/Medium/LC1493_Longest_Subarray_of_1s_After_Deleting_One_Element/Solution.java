@@ -6,7 +6,9 @@ class Solution {
         int l = 0, zeroCount = 0, maxLen = 0;
 
         for (int r = 0; r < n; r++) {
-            if (nums[r] == 0)   zeroCount++;
+            if (nums[r] == 0) {
+                zeroCount++;
+            }
             while (zeroCount > 1) {
                 if (nums[l] == 0) {
                     zeroCount--;
@@ -15,6 +17,6 @@ class Solution {
             }
             maxLen = Math.max(maxLen, r - l);
         }
-        return (maxLen == n)  ? maxLen - 1 :maxLen;
+        return maxLen;
     }
 }
