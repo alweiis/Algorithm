@@ -4,28 +4,27 @@ class Solution {
     int count = 0;
 
     public int longestZigZag(TreeNode root) {
-        dfsRight(root.right, 0);
-        dfsLeft(root.left, 0);
-
+        dfsRight(root.right, 1);
+        dfsLeft(root.left, 1);
         return count;
     }
 
     private void dfsRight(TreeNode node, int currentCount) {
         if (node == null) {
-            count = Math.max(count, currentCount);
             return;
         }
+        count = Math.max(count, currentCount);
         dfsLeft(node.left, currentCount + 1);
-        dfsRight(node.right, 0);
+        dfsRight(node.right, 1);
     }
 
     private void dfsLeft(TreeNode node, int currentCount) {
         if (node == null) {
-            count = Math.max(count, currentCount);
             return;
         }
+        count = Math.max(count, currentCount);
         dfsRight(node.right, currentCount + 1);
-        dfsLeft(node.left, 0);
+        dfsLeft(node.left, 1);
     }
 }
 
