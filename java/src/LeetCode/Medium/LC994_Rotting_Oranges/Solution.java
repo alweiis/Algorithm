@@ -5,58 +5,59 @@ import java.util.Queue;
 
 class Solution {
     public int orangesRotting(int[][] grid) {
+        int[] dx = {0, 0, 1, -1};
+        int[] dy = {1, -1, 0, 0};
+
         int m = grid.length;
         int n = grid[0].length;
-
-        int[][] directions = {
-                {-1, 0}, // up
-                {1, 0},  // down
-                {0, -1}, // left
-                {0, 1}   // right
-        };
+        int minutes = 0, freshOranges = 0;
 
         Queue<int[]> queue = new ArrayDeque<>();
-        // 초기 썩은 오렌지 큐에 추가
+
         for (int r = 0; r < m; r++) {
             for (int c = 0; c < n; c++) {
-                if(grid[r][c] == 2) {
+                if (grid[r][c] == 1) {
+                    freshOranges++;
+                } else if (grid[r][c] == 2) {
                     queue.offer(new int[]{r, c});
                 }
             }
         }
 
-        int minute = 0;
+        if (freshOranges == 0) return 0;
 
         while (!queue.isEmpty()) {
             int size = queue.size();
             boolean rotted = false;
 
             for (int i = 0; i < size; i++) {
-                int[] cur = queue.poll();
-                int r = cur[0];
-                int c = cur[1];
+                int[] current = queue.poll();
+                int x = current[0];
+                int y = current[1];
 
-                for (int[] dir: directions) {
-                    int nr = r + dir[0];
-                    int nc = c + dir[1];
+                for (int k = 0; k < 4; k++) {
+                    int nx = x + dx[k];
+                    int ny = y + dy[k];
 
-                    if (nr < 0 || nr >= m || nc < 0 || nc >= n) continue;
-                    if (grid[nr][nc] != 1) continue;
+                    if (nx < 0 || nx >= m || ny < 0 || ny >= n) {
+                        continue;
+                    }
 
-                    grid[nr][nc] = 2;
-                    queue.offer(new int[]{nr, nc});
-                    rotted = true;
+                    if (grid[nx][ny] == 1) {
+                        rotted = true;
+                        grid[nx][ny] = 2;
+                        freshOranges--;
+                        queue.offer(new int[]{nx, ny});
+                    }
                 }
             }
-            if (rotted) minute++;
+            if (rotted) minutes++;
         }
 
-        // 아직 안 썩은 오렌지가 있는지 확인
-        for (int r = 0; r < m; r++) {
-            for (int c = 0; c < n; c++) {
-                if(grid[r][c] == 1) return -1;
-            }
+        if (freshOranges == 0) {
+            return minutes;
+        } else {
+            return -1;
         }
-        return minute;
     }
 }
